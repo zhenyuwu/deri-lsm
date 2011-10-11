@@ -96,8 +96,29 @@ The User panel provides functionalities such as setting a notification criteria,
 ===User annotation===
 This function is used to annotate a sensor data source of interest. It provides an annotation wizard to guide the user through the anotation process driven by the sensor ontologies. 
 
-[http://deri-lsm.googlecode.com/files/notification1.JPG]
-[http://deri-lsm.googlecode.com/files/notification1.JPG]
-[http://deri-lsm.googlecode.com/files/notification1.JPG]
-[http://deri-lsm.googlecode.com/files/notification1.JPG]
-[http://deri-lsm.googlecode.com/files/notification1.JPG]
+[http://deri-lsm.googlecode.com/files/annotation1.JPG]
+[http://deri-lsm.googlecode.com/files/annotation2.JPG]
+[http://deri-lsm.googlecode.com/files/annotation3.JPG]
+[http://deri-lsm.googlecode.com/files/annotation4.JPG]
+[http://deri-lsm.googlecode.com/files/annotation5.JPG]
+[http://deri-lsm.googlecode.com/files/annotation6.JPG]
+
+===User data management===
+[http://deri-lsm.googlecode.com/files/datamanagement1.JPG]
+
+====Data purging====
+This functionality allows users to remove a certain chunk of historical data. Users can delete data the meets some condition such as certain time period or produced by a particular sensor. Note that this function is only authorised the users who added the sensor data sources being deleted.
+
+====Data mashup====
+
+[http://deri-lsm.googlecode.com/files/datamashup.JPG]
+
+====Data feed====
+The data feed function is built for advanced user. To register a data feed, the user first has to enter a CQELS query (http://code.google.com/p/cqels/wiki/CQELS_language), which is then executed continously to output matched data. Second, the user’s e-mail address is also required for sending the feed’s URL.
+[http://deri-lsm.googlecode.com/files/datafeed1.JPG]
+[http://deri-lsm.googlecode.com/files/datafeed2.JPG]
+
+==Sparql endpoint service==
+LSM provides a SPARQL endpoint for Semantic Web developers. Users can directly query LSM datasets. Futhermore, users can also combine data from other SPARQL endpoints like Linkedgeodata or DBPedia with  the data from the LSM SPARQL enpoint via the SPARQL 1.1 Federation extension http://www.w3.org/TR/sparql11-federated-query/
+
+[http://deri-lsm.googlecode.com/files/sparqlendpoint.JPG]
