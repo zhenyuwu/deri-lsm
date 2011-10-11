@@ -10,15 +10,15 @@ The data acquisition layer provides wrappers to collect sensor readings and tran
 Linked Stream Data layout previously described. %[annotation integrated into wrapper configuration to create transformation rules]. 
 LSM currently provides three types of wrappers:
 
-===Physical wrappers:=== are used for collecting sensor data coming from physical devices via physical 
+=== Physical wrappers: === are used for collecting sensor data coming from physical devices via physical 
   connections, for instance, serial and ad-hoc network connections.
 
 
-===Mediate wrappers:=== mediate the connections to other sensor middlewares by transforming data from a variety of data formats  and data feeding protocols into RDF. LSM currently provides mediate wrappers to some of the most used middlewares like [GSN http://sourceforge.net/apps/trac/gsn/],
+=== Mediate wrappers: === mediate the connections to other sensor middlewares by transforming data from a variety of data formats  and data feeding protocols into RDF. LSM currently provides mediate wrappers to some of the most used middlewares like [GSN http://sourceforge.net/apps/trac/gsn/],
   [Pachubehttp://pachube.com], the sensor gateway/web services ([NOAA http://www.noaa.gov/]),
   and the [London Transport syndication http://www.tfl.gov.uk/businessandpartners/syndication/default.aspx].
 
-===Linked Data wrappers:=== provide access to the sensor data sources being collected and stored 
+=== Linked Data wrappers: === provide access to the sensor data sources being collected and stored 
   in relational databases by exposing the relational data structure in RDF via mapping rules like the ones provided in the [D2Rhttp://www4.wiwiss.fu-berlin.de/bizer/d2rmap/d2rmap.htm] mapping language.
 
 ==Linked Data Layer==
