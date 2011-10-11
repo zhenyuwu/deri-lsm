@@ -2,7 +2,7 @@
 
 = Architecture =
 <div align="center">
-[http://deri-lsm.googlecode.com/files/architecture.jpg]
+[http://deri-lsm.googlecode.com/files/lsmmanual_v1.1.pdf http://deri-lsm.googlecode.com/files/architecture.jpg]
 </div>
 ==Data Acquisition Layer==
 
