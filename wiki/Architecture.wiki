@@ -6,15 +6,14 @@
 
 ==Data Acquisition Layer==
 
-The data acquisition layer provides wrappers to collect sensor readings and transform them according to the Linked Stream Data layout previously described. %[annotation integrated into wrapper configuration to create transformation rules]. 
-LSM currently provides three types of wrappers:
+The data acquisition layer provides wrappers to collect sensor readings and transform them according to the Linked Stream Data layout previously described.LSM currently provides three types of wrappers:
 
 *Physical wrappers:* are used for collecting sensor data coming from physical devices via physical connections, for instance, serial and ad-hoc network connections.
 
 
-*Mediate wrappers:* mediate the connections to other sensor middlewares by transforming data from a variety of data formats  and data feeding protocols into RDF. LSM currently provides mediate wrappers to some of the most used middlewares like [GSN http://sourceforge.net/apps/trac/gsn/],[Pachube http://pachube.com], the sensor gateway/web services ([NOAA http://www.noaa.gov/]),and the [London Transport syndication http://www.tfl.gov.uk/businessandpartners/syndication/default.aspx ].
+*Mediate wrappers:* mediate the connections to other sensor middlewares by transforming data from a variety of data formats  and data feeding protocols into RDF. LSM currently provides mediate wrappers to some of the most used middlewares like [http://sourceforge.net/apps/trac/gsn/ GSN ],[http://pachube.com Pachube ], the sensor gateway/web services ([ http://www.noaa.gov/ NOAA]),and the [http://www.tfl.gov.uk/businessandpartners/syndication/default.aspx London Transport syndication].
 
-*Linked Data wrappers:* provide access to the sensor data sources being collected and stored in relational databases by exposing the relational data structure in RDF via mapping rules like the ones provided in the [D2Rhttp://www4.wiwiss.fu-berlin.de/bizer/d2rmap/d2rmap.htm] mapping language.
+*Linked Data wrappers:* provide access to the sensor data sources being collected and stored in relational databases by exposing the relational data structure in RDF via mapping rules like the ones provided in the [ http://www4.wiwiss.fu-berlin.de/bizer/d2rmap/d2rmap.htmD2R] mapping language.
 
 ==Linked Data Layer==
 
@@ -23,12 +22,12 @@ The Linked Data layer provides the interface to access not only Linked Sensor Da
 ==Data Access Layer=
 
 The Data Access layer supports the declarative queries on top of the Linked Data layer. Queries over Linked Stream Data can follow either a pull-based or a push-based model. LSM provides two query processors, one for each of the query models, as described below. These query processors also 
-enable data access from remote SPARQL endpoints via a federation extension of the [SPARQL 1.1 language http://www.w3.org/TR/sparql11-federated-query/ ].
+enable data access from remote SPARQL endpoints via a federation extension of the [http://www.w3.org/TR/sparql11-federated-query/ SPARQL 1.1 language ].
 
 *Linked Data query processor:* supports traditional pull-based queries under SPARQL language over sensor metadata and 
   sensor readings (live and historical).
 
-*CQELS engine:* supports push-based continuous queries over Linked Stream Data under [CQELS language http://code.google.com/p/cqels/wiki/CQELS_language]. This query engine allows user to actively filter and integrate real-time data to create new streams of data from existing sources.
+*CQELS engine:* supports push-based continuous queries over Linked Stream Data under [http://code.google.com/p/cqels/wiki/CQELS_language CQELS language ]. This query engine allows user to actively filter and integrate real-time data to create new streams of data from existing sources.
 
 ==Application layer==
 
@@ -42,4 +41,4 @@ sources. The derived data source is created via either a visual wizard or a cont
 *Linked Sensor Explorer:* enables the exploration of existing data
 sources. A faceted browsing functionality helps the user to filter sensor data based on relevantproperties, e.g. location and meanings of readings. In the background the exploration and navigation actions are translated into complex queries and executed on top of the Linked Data query processor, but all are done transparently to the user.
 
-*Streaming channels:* actively stream integrated data sources via streaming protocols like [Google PubSubHubbub http://code.google.com/p/pubsubhubbub/] and[XMPP http://xmpp.org/].
+*Streaming channels:* actively stream integrated data sources via streaming protocols like [http://code.google.com/p/pubsubhubbub/ Google PubSubHubbub ] and[http://xmpp.org/ XMPP ].
