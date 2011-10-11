@@ -122,3 +122,7 @@ The data feed function is built for advanced user. To register a data feed, the 
 LSM provides a SPARQL endpoint for Semantic Web developers. Users can directly query LSM datasets. Futhermore, users can also combine data from other SPARQL endpoints like Linkedgeodata or DBPedia with  the data from the LSM SPARQL enpoint via the SPARQL 1.1 Federation extension http://www.w3.org/TR/sparql11-federated-query/
 
 [http://deri-lsm.googlecode.com/files/sparqlendpoint.JPG]
+
+==Mobile application demo==
+[http://deri-lsm.googlecode.com/files/moblie1.JPG]
+[http://deri-lsm.googlecode.com/files/moblie2.JPG]
