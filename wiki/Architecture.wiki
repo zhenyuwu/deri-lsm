@@ -1,9 +1,9 @@
 #summary One-sentence summary of this page.
 
 = Architecture =
-<div align="center">
+<center>
 [http://deri-lsm.googlecode.com/files/lsmmanual_v1.1.pdf http://deri-lsm.googlecode.com/files/architecture.jpg]
-</div>
+</center>
 ==Data Acquisition Layer==
 
 The data acquisition layer provides wrappers to collect sensor readings and transform them according to the Linked Stream Data layout previously described.LSM currently provides three types of wrappers:
