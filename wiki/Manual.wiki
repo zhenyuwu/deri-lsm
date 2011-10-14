@@ -126,3 +126,5 @@ LSM provides a SPARQL endpoint for Semantic Web developers. Users can directly q
 ==Mobile application demo==
 [http://deri-lsm.googlecode.com/files/moblie1.JPG]
 [http://deri-lsm.googlecode.com/files/moblie2.JPG]
+
+You can download LSM Manual [http://deri-lsm.googlecode.com/files/lsmmanual_v1.1.pdf here]
