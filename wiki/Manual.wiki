@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Linked Stream Middleware (LSM) is a platform that brings together the live real world sensed data and the Semantic Web. It provides many functionalities such as: i) wrappers for real time data collection and publish- ing; ii) a web interface for data annotation and visualisation; and iii) a SPARQL endpoint for querying unified Linked Stream Data and Linked Data.
+Linked Sensor Middleware (LSM) is a platform that brings together the live real world sensed data and the Semantic Web. It provides many functionalities such as: i) wrappers for real time data collection and publish- ing; ii) a web interface for data annotation and visualisation; and iii) a SPARQL endpoint for querying unified Linked Stream Data and Linked Data.
 
 
 = Details =
