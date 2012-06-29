@@ -1,0 +1,23 @@
+#summary Guide to setup LSM wrapper module.
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+# LSM Wrapper requirements
+==Hardware requirements==
+* Virtuoso server
+* Rabbitmq server
+* Hadoop computer system (master, slaves)
+* Apache 7.2 server
+==Library requirements==
+Virtuoso Universal Server 6.3 (commercial or open source edition)
+* Apache Tomcat 7
+* Hadoop libs
+* JavaSE-1.6
+* RabbitMq client libs
+* Cqels libs
+* dom4j-1.6.1.jar, saxon9he.jar, jaxen-1.1-beta-7.jar
