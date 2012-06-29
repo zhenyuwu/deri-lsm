@@ -7,17 +7,120 @@ Add your content here.
 
 = Details =
 
-# LSM Wrapper requirements
+=LSM Wrapper requirements=
 ==Hardware requirements==
-* Virtuoso server
-* Rabbitmq server
-* Hadoop computer system (master, slaves)
-* Apache 7.2 server
+  * Virtuoso server
+  * Rabbitmq server
+  * Hadoop computer system (master, slaves)
+  * Apache 7.2 server
 ==Library requirements==
 Virtuoso Universal Server 6.3 (commercial or open source edition)
-* Apache Tomcat 7
-* Hadoop libs
-* JavaSE-1.6
-* RabbitMq client libs
-* Cqels libs
-* dom4j-1.6.1.jar, saxon9he.jar, jaxen-1.1-beta-7.jar
+  * Apache Tomcat 7
+  * Hadoop libs
+  * JavaSE-1.6
+  * RabbitMq client libs
+  * Cqels libs
+  * dom4j-1.6.1.jar, saxon9he.jar, jaxen-1.1-beta-7.jar
+=Virtuoso for Linux (Enterprise Edition)=
+==Before You Install==
+To ensure a smooth installation, please review the following checklist before you start the setup program
+===Have you downloaded the software?===
+If you have not already done so, please download your copy of OpenLink Virtuoso from the Virtuoso web site. The URL is http://www.openlinksw.com/virtuoso/. When you visit the site, select "Software Download".
+===Reinstalling Virtuoso?===
+
+If you are reinstalling Virtuoso, you must first stop the Database Servers. You can shut these services down with the following command executed from your Linux shell prompt:
+
+Beta 1 Users
+
+     sh virtuoso-lite.rc stop
+
+  or
+
+     virtuoso-lite.rc stop
+
+  or
+
+     ./virtuoso-lite.rc stop
+
+Beta 2 Users
+
+     sh virtuoso-stop.sh
+
+  or
+
+     virtuoso-stop.sh
+
+  or
+
+     ./virtuoso-stop.sh
+
+You may also want to first uninstall prior Virtuoso RPM packages.
+The following command (executed as root) can be used to uninstall the package:
+
+rpm -e virtuoso-lite-1.1-3_glibc2
+
+  or
+
+     rpm -e virtuoso-enterprise-1.1-3_glibc2
+ 
+  or
+
+     rpm -e virtuoso-lite-1.1-3_libc5
+
+depending on Linux system and Virtuoso Server being used.
+===Are ports 1111,1112, 8889 and 8890 free?===
+
+During the installation you will be prompted for an HTTP port number for use by each Virtuoso System Manager. If you are already running a web server or other listener on that port, you will encounter problems, and should choose another free port when you are prompted.
+By default, the Virtuoso DBMS listens on port 1111, and the Demo Database on 1112. If these ports is currently in use by another server then after the installation completes, you will need to change the port numbers in the Local Virtuoso ODBC or UDBC DSN that is created during the installation process, and also in the following file:
+
+$<Directory where Virtuoso is installed>/bin/virtuoso.ini
+
+typically
+
+     /usr/local/virtuoso
+
+but can of course be any location of your choosing.
+
+To check if a port is in use you can use the following command, and review the output:
+
+    netstat -an | more 
+===Do you already have a "virtuoso" user account on your Linux system?===
+Although this is no longer a requirement of the installation it may be suitable to create a new Virtuoso user account for administering the Virtuoso server.
+===Do you already have functional iODBC data sources on your system?===
+The OpenLink Virtuoso for Linux installation presumes the following:
+ * You intend to connect to a Local Virtuoso server using iODBC or OpenLink UDBC
+ * You intend to connect to one or more Remote Virtuoso servers on your network using iODBC or UDBC
+ * You intend to Attach tables hosted within non-local or Remote Virtuoso database servers, into a Local or Remote Virtuoso Server
+ * The existence of functional OpenLink or third-party iODBC drivers for Linux that connect to the non database servers referred to above.
+ * In the absence of iODBC drivers for your non Virtuoso database, that a functional OpenLink or third-party UDBC Drivers exists for these database servers.
+
+Instructions on how to manually configure iODBC Data Source Names is available at the following URL: 
+http://www.openlinksw.com/info/docs/rel3doc/unix/odbcsdk.htm If you are using OpenLink Multi-Tier ODBC Drivers for your remote database connections then we highly recommend the use of the Virtuoso System Manager for creating iODBC Data Source Names.
+===Are your iODBC Data Source Names functional?===
+It is a useful sanity-check to ensure that your iODBC or UDBC data sources are functional, OpenLink provides an "odbctest" program for verifying basic usability of iODBC data sources. Both of these programs reside in the "samples" directory situated beneath the directory into which RPM installs Virtuoso.
+==Installation Process==
+Once you have downloaded the required tar file from the web or ftp site and have placed the file in a designated installation directory you are ready to commence the Virtuoso installation process.
+
+You may want to specify a new user to own the Virtuoso installation and then you can place the installation tar file into that users home directory.
+ * First step is to un-tar the file to obtain the install script and archive file. Use the following command:
+    tar xvf <tar file>.tar
+
+    replacing <tar file> with the relevant name of the file you downloaded.
+ * Run the install script using the following command:
+      [virtuoso@myserver virtuoso]$ sh /install.sh
+
+   The installation process will now begin and prompt you for required information.
+ *  The install script will first try and detect running Virtuoso server instances. In cases where an old Virtuoso server is being upgraded you must ensure that the old Virtuoso is first shutdown. It is advisable that you backup up your systems before continuing.
+Checking requested components
+Checking for existing installations and/or instances of Virtuoso...
+ 7269 ?        00:06:23 virtuoso
+/proc/net/tcp: Permission denied
+
+** Alert: [running processes; ]
+
+** Warning: You have Virtuoso previously installed on this machine.
+**
+** To avoid existing data being overwritten or lost, you may press ^C to
+** exit this installer, terminate and remove the existing installation,
+** or proceed taking care to enter non-conflicting data below, by pressing
+** Enter.
