@@ -113,14 +113,139 @@ You may want to specify a new user to own the Virtuoso installation and then you
  *  The install script will first try and detect running Virtuoso server instances. In cases where an old Virtuoso server is being upgraded you must ensure that the old Virtuoso is first shutdown. It is advisable that you backup up your systems before continuing.
 Checking requested components
 Checking for existing installations and/or instances of Virtuoso...
- 7269 ?        00:06:23 virtuoso
-/proc/net/tcp: Permission denied
+      7269 ?        00:06:23 virtuoso
 
-** Alert: [running processes; ]
+      /proc/net/tcp: Permission denied
 
-** Warning: You have Virtuoso previously installed on this machine.
-**
-** To avoid existing data being overwritten or lost, you may press ^C to
-** exit this installer, terminate and remove the existing installation,
-** or proceed taking care to enter non-conflicting data below, by pressing
-** Enter.
+      Alert: [running processes; ]
+
+      Warning: You have Virtuoso previously installed on this machine.
+
+      To avoid existing data being overwritten or lost, you may press ^C to
+
+     exit this installer, terminate and remove the existing installation,
+    or proceed taking care to enter non-conflicting data below, by pressing
+
+   Enter.
+
+If you are upgrading a server then the installer will save copies of old configuration data for later use.
+
+     Preserving any existing configurations...
+
+     find: db: No such file or directory
+
+     find: demo: No such file or directory
+
+     find: bin: No such file or directory
+
+     0 blocks
+ * You should have received a license file via email. This file should be copied to the server installation directory prior to installation. The installer will ask you for its location if none is found. If you do not have the license file at this time the installer will still continue.
+
+     Checking licensing...
+
+     A license file is required for the Virtuoso Server Instance(s) to
+     start. Please enter the full path and name of a valid Virtuoso
+     license file [./virtuoso.lic]:
+
+ * Now the installer will continue to install files from the package. Every file installed will be echoed to the screen.
+     Unpacking enterprise.tar.Z
+     bin/
+     bin/v27/
+     bin/v27/bin/
+     ...
+     ...
+     vsp/releasenotes.css
+     vsp/releasenotes.html
+     vsp/vsp_auth.sql
+     ...done
+ * When the files have been installed from the package the location supplied for the license file will be checked. If one is not found then you will receive the following warning:
+
+           WARNING: The license file entered is not valid or does not exist.
+           You will need to copy a valid license file manually
+           to the demo and db directories after the Virtuoso        installation completes.
+
+ * The Virtuoso server installation has a few variations. The next question from the installer asks which one you want to make default. Even though each variation is installed, a convenient symbolic link will be made to bin/virtuoso from the selected type. Running ls -l in the bin directory after installation will reveal all.
+Checking for installed optional components...
+Please choose which Virtuoso server you wish to install:
+  # Universal Server
+  # Universal Server with iODBC
+  # Universal Server with iODBC and support for Java
+  # Universal Server with iODBC and support for PHP
+  # Universal Server with iODBC and support for Java and PHP
+  # Universal Server with iODBC and support for CLR Hosting via Mono
+  # Universal Server with iODBC and support for CLR and Java
+  # Universal Server with iODBC and support for CLR, Java and PHP4
+
+  [8] :
+ * The installer will search for required third-party components depending on which option is selected in the previous step. For example, choosing the Virtuoso with Java support will require a Java runtime. Results of the search are listed as suggestions from which you can confirm or type the actual location.
+
+     Attempting to locate the java runtime library (libjvm.so)...
+
+     Suggested file locations:
+
+     /usr/local/lib
+
+     /usr/local/jdk1.3/jre/lib/i386/classic
+
+     /usr/local/jdk1.3/jre/lib/i386/server
+
+     /usr/local/jdk1.3/jre/lib/i386/client
+
+     /usr/opt/blackdown-jdk-1.3.1/jre/lib/i386/classic
+
+     /usr/opt/blackdown-jdk-1.3.1/jre/lib/i386/server
+
+     /usr/opt/blackdown-jdk-1.3.1/jre/lib/i386/client
+
+     /usr/local/jdk1.3/jre/lib/i386/classic
+
+     /usr/local/jdk1.3/jre/lib/i386/server
+
+     /usr/local/jdk1.3/jre/lib/i386/client
+
+     Please select one of the above locations or press Enter to use
+the default (/usr/local/jdk1.3/jre/lib/i386/client):
+* The Virtuoso installer includes a Mono runtime distribution, since Mono is a developing platform you may have your own installation that you can supply the path to here.
+
+     Please enter the full path to the Mono installation directory or
+Enter to use the default (/home/openlink/virtuoso/mono)
+
+* Virtuoso now has enough information to configure its environment and startup scripts.
+     Setting up initial values in scripts and config files
+     Setting up file bin/odbc.ini
+     Setting up file bin/odbcinst.ini
+     Setting up file bin/demo-start.sh
+     Setting up file bin/demo-stop.sh
+     Setting up file bin/virtuoso-start.sh
+     Setting up file bin/virtuoso-stop.sh
+     Setting up file db/virtuoso.ini
+     Setting up file demo/demo.ini
+     Setting up file mono/bin/mcs
+     Setting up file virtuoso-enterprise.csh
+     Setting up file virtuoso-enterprise.sh
+     Setting up file initd_startup.template
+     Setting up file initd_startup_demo.template
+* The installer will now ask a series of questions for configuring the Virtuoso .INI files. First confirm or alter the default database SQL listener port number. This is the port number that this database will be available for ODBC connections and iSQL sessions.
+
+     Configuring port numbers for default and demo databases
+
+     Please enter a port on which to run the default database
+
+     SQL listener (default 1111):
+* Now you must specify the port number of the default database HTTP listener. This is the HTTP port that Virtuoso will listen on by default, you web-based administration interface for Virtuoso will be found here. If you confirm the default of 8889, then your Virtuoso will be available from: http://server:8889/, changing server to the name of your machine appropriately.
+
+     Please enter a port on which to run the default database
+
+     HTTP listener (default 8889):
+
+* Now you must supply a friendly name that you wish to identify your Virtuoso server by on the network using Zero Configuration.
+
+     See Also:
+
+     The Zero Configuration section.
+
+     Please enter a name for default database Zero Configuration
+(default "Virtuoso Universal Server at myserver:1111"):
+* The Zero Configuration details need a default username to make the connection with.
+     Please enter a user name for default database Zero Configuration
+     (default "dba"):
