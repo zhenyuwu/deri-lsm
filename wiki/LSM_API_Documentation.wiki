@@ -1,4 +1,4 @@
-LSM API Documentation.
+#summary LSM API Documentation.
 
 = Introduction =
 
