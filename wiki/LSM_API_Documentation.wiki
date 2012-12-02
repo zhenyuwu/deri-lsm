@@ -19,10 +19,10 @@ Required Java libraries:
 
 import java.util.Date;
 
-import lsm.beans.Place;
-import lsm.beans.Sensor;
-import lsm.beans.User;
-import deri.lsm.LSMTripleStore;
+import deri.lsm.beans.Place;
+import deri.lsm.beans.Sensor;
+import deri.lsm.beans.User;
+import deri.lsm.server.LSMTripleStore;
 
 
 public class TestLSM {
