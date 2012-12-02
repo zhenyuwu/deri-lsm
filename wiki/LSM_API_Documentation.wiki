@@ -113,6 +113,5 @@ public class TestLSM {
 	obvCO.setUnit("C");
 	obs.addReading(obvCO);
 	
-	LSMTripleStore lsmStore = new LSMTripleStore();
 	lsmStore.sensorDataUpdate(obs);
 }}}
