@@ -2,11 +2,12 @@
 
 = Introduction =
 
-Add your content here.
-
+The following example illustrates how to use lsm java API a class for adding, deleting and updating GSN sensor data to LSM triple store
 
 = Details =
 
+Required Java version: Java SE 1.7
+Required Java libraries
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
