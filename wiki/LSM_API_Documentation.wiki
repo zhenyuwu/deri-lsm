@@ -7,7 +7,13 @@ The following example illustrates how to use lsm java API a class for adding, de
 = Details =
 
 Required Java version: Java SE 1.7
-Required Java libraries
+
+Required Java libraries:
+
+- [http://deri-lsm.googlecode.com/files/lsmlibs.jar lsmlibs]
+
+- [http://sourceforge.net/projects/dom4j/ dom4j]
+
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
