@@ -116,7 +116,7 @@ public class TestLSM {
 	lsmStore.sensorDataUpdate(obs);
 }}}
 
-If the sensor metadata or sensor data is already in N-Triple format, you can use these methods *sensorAdd(String triples)* and sensorDataUpdate(String triples)* to insert directly into LSM triple store
+If the sensor metadata or sensor data are already in N-Triple format, you can use these methods *sensorAdd(String triples)* and *sensorDataUpdate(String triples)* to insert directly into LSM triple store
 
 ==Example 3. Retrieve sensor object by sensorURL id or by sensor source==
 {{{
