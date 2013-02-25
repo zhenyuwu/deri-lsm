@@ -43,7 +43,6 @@ public class TestLSM {
          Sensor sensor  = new Sensor();
          sensor.setName("lausanne_1057");
          sensor.setAuthor("sofiane");
-	 sensor.setSensorType("gsn");
 	 sensor.setSourceType("lausanne");
 	 sensor.setInfor("Air Quality Sensors from Lausanne");
          sensor.setSource("http://opensensedata.epfl.ch:22002/gsn?REQUEST=113&name=lausanne_1057");
