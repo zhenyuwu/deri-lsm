@@ -2,7 +2,7 @@
 
 = Introduction =
 
-The following examples illustrate how to use lsm java API a class for adding, deleting and updating GSN sensor data to LSM triple store
+The following examples illustrate how to use lsm java API for adding, deleting and updating GSN sensor data into LSM triple store
 
 = Details =
 
