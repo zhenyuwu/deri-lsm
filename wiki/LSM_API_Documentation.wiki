@@ -14,6 +14,8 @@ Required Java libraries:
 
 - [http://sourceforge.net/projects/dom4j/ dom4j]
 
+- [http://ftp.heanet.ie/mirrors/www.apache.org/dist/jena/ jena]
+
 ==Example 1. How to add new sensor into LSM triple store==
 {{{
 
