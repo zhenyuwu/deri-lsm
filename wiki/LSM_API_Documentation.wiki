@@ -48,8 +48,10 @@ public class TestLSM {
 	 sensor.setSourceType("lausanne");
 	 sensor.setInfor("Air Quality Sensors from Lausanne");
          sensor.setSource("http://opensensedata.epfl.ch:22002/gsn?REQUEST=113&name=lausanne_1057");
+         sensor.setMetaGraph("http://lsm.deri.ie/yourMetaGraphURL");
+         sensor.setDataGraph("http://lsm.deri.ie/yourDataGraphURL");
          sensor.setTimes(new Date());
-		 
+        
 	// set sensor location information (latitude, longitude, city, country, continent...)
          Place place = new Place();
          place.setLat(46.529838);
