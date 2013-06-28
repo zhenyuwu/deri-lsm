@@ -1,0 +1,794 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ssn "http://purl.oclc.org/NET/ssnx/ssn#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY wgs84_pos "http://www.w3.org/2003/01/geo/wgs84_pos#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://sensormasher.deri.org/ont/lsm.owl#"
+     xml:base="http://sensormasher.deri.org/ont/lsm.owl"
+     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="http://sensormasher.deri.org/ont/lsm.owl">
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+        <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#atStation -->
+
+    <owl:ObjectProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#atStation">
+        <rdfs:domain rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#ArrivingTrainAtStation"/>
+        <rdfs:range rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#RailwayStation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasObservation -->
+
+    <owl:ObjectProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasObservation">
+        <rdfs:range rdf:resource="&ssn;Observation"/>
+        <rdfs:domain rdf:resource="&ssn;Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasWrapper -->
+
+    <owl:ObjectProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasWrapper">
+        <rdfs:domain rdf:resource="&ssn;Sensor"/>
+        <rdfs:range rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#Wrapper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#isAddedBy -->
+
+    <owl:ObjectProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#isAddedBy">
+        <rdfs:domain rdf:resource="&ssn;Sensor"/>
+        <rdfs:range rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#isObservedPropertyOf -->
+
+    <owl:ObjectProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#isObservedPropertyOf">
+        <rdfs:range rdf:resource="&ssn;Observation"/>
+        <rdfs:domain rdf:resource="&DUL;Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasAuthor -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasAuthor">
+        <rdfs:domain rdf:resource="&ssn;Sensor"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasCity -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasCity">
+        <rdfs:domain rdf:resource="&DUL;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasContinent -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasContinent">
+        <rdfs:domain rdf:resource="&DUL;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasCountry -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasCountry">
+        <rdfs:domain rdf:resource="&DUL;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasGeonameid -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasGeonameid">
+        <rdfs:domain rdf:resource="&DUL;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasProvince -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasProvince">
+        <rdfs:domain rdf:resource="&DUL;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasSensorType -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasSensorType">
+        <rdfs:domain rdf:resource="&ssn;Sensor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasSource -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasSource">
+        <rdfs:domain rdf:resource="&ssn;Sensor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasSourceType -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasSourceType">
+        <rdfs:domain rdf:resource="&ssn;Sensor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasStreet -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasStreet">
+        <rdfs:domain rdf:resource="&DUL;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasTime -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasTime">
+        <rdfs:domain rdf:resource="&DUL;Entity"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasWoeid -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasWoeid">
+        <rdfs:domain rdf:resource="&DUL;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#hasZipcode -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#hasZipcode">
+        <rdfs:domain rdf:resource="&DUL;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#inputDataFormat -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#inputDataFormat">
+        <rdfs:domain rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#Wrapper"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#nearest -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#nearest">
+        <rdfs:domain rdf:resource="&DUL;Place"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#outputDataFormat -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#outputDataFormat">
+        <rdfs:domain rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#Wrapper"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#timeUpdatedConcurrence -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#timeUpdatedConcurrence">
+        <rdfs:domain rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#Wrapper"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#unit -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#unit">
+        <rdfs:domain rdf:resource="&ssn;MeasurementCapability"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#value -->
+
+    <owl:DatatypeProperty rdf:about="http://sensormasher.deri.org/ont/lsm.owl#value">
+        <rdfs:domain rdf:resource="&ssn;Property"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:DatatypeProperty rdf:about="&wgs84_pos;lat">
+        <rdfs:domain rdf:resource="&DUL;Place"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:DatatypeProperty rdf:about="&wgs84_pos;long">
+        <rdfs:domain rdf:resource="&DUL;Place"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Acceleration -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Acceleration">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#MotionRelatedCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#AirTemperature -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#AirTemperature">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Altitude -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Altitude">
+        <rdfs:subClassOf rdf:resource="&ssn;Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#ArrivingTrainAtStation -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#ArrivingTrainAtStation">
+        <rdfs:subClassOf rdf:resource="&ssn;FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#AtmosphereHumidity -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#AtmosphereHumidity">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#MeteorologicalyQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#AtmospherePressure -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#AtmospherePressure">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#IntensiveCapability"/>
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#MeteorologicalyQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#AtmosphereVisibility -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#AtmosphereVisibility">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#MeteorologicalyQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#BikeAvailability -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#BikeAvailability">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#BikeDockAvailability -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#BikeDockAvailability">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#CallSign -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#CallSign">
+        <rdfs:subClassOf rdf:resource="&ssn;Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Category -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Category">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Comment -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Comment">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Destination -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Destination">
+        <rdfs:subClassOf rdf:resource="&ssn;Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Direction -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Direction">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#MotionRelatedCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#District -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#District">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#DoubleValue -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#DoubleValue">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Duration -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Duration">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Elevation -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Elevation">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#EnvironmentalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#EnvironmentalCapability -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#EnvironmentalCapability">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#ExtensiveCapability -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#ExtensiveCapability">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Flight -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Flight">
+        <rdfs:subClassOf rdf:resource="&ssn;FeatureOfInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#FlightCIAO -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#FlightCIAO">
+        <rdfs:subClassOf rdf:resource="&ssn;Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#IntegerValue -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#IntegerValue">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#IntensiveCapability -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#IntensiveCapability">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Latitude -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Latitude">
+        <rdfs:subClassOf rdf:resource="&ssn;Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Length -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Length">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#LinearExtend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#LinearExtend -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#LinearExtend">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#SpatialExtendRelatedQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Longitude -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Longitude">
+        <rdfs:subClassOf rdf:resource="&ssn;Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#MeteorologicalyQuantity -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#MeteorologicalyQuantity">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#MotionRelatedCapability -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#MotionRelatedCapability">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#RailwayStation -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#RailwayStation">
+        <rdfs:subClassOf rdf:resource="&wgs84_pos;SpatialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#RoadActivity -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#RoadActivity">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#ExtensiveCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Sealevel -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Sealevel">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#EnvironmentalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#SecondToStation -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#SecondToStation">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Snow -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Snow">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#MeteorologicalyQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#SnowDepth -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#SnowDepth">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#Snow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#SnowFall -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#SnowFall">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#Snow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#SpatialExtendRelatedQuantity -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#SpatialExtendRelatedQuantity">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#ExtensiveCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Speed -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Speed">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#MotionRelatedCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Station -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Station">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#StationPlatform -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#StationPlatform">
+        <rdfs:subClassOf rdf:resource="&ssn;Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Status -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Status">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#StringValue -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#StringValue">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Temperature -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Temperature">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#MeteorologicalyQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#TemperatureRelatedCapability -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#TemperatureRelatedCapability">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#TimeToStation -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#TimeToStation">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#TrainNumber -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#TrainNumber">
+        <rdfs:subClassOf rdf:resource="&ssn;Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#User -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#User">
+        <rdfs:subClassOf rdf:resource="&DUL;Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#UserContact -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#UserContact">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#User"/>
+        <rdfs:subClassOf rdf:resource="&DUL;InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Valuation -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Valuation">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Velocity -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Velocity">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#MotionRelatedCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#VisualProperty -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#VisualProperty">
+        <rdfs:subClassOf rdf:resource="&ssn;Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#WaveHeight -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#WaveHeight">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#EnvironmentalCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Weather -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Weather">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#TemperatureRelatedCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#WebcamSnapShot -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#WebcamSnapShot">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#VisualProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Wind -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Wind">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#MeteorologicalyQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#WindChill -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#WindChill">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#WindDirection -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#WindDirection">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#Direction"/>
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#MeteorologicalyQuantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#WindSpeed -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#WindSpeed">
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#MeteorologicalyQuantity"/>
+        <rdfs:subClassOf rdf:resource="http://sensormasher.deri.org/ont/lsm.owl#Speed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sensormasher.deri.org/ont/lsm.owl#Wrapper -->
+
+    <owl:Class rdf:about="http://sensormasher.deri.org/ont/lsm.owl#Wrapper">
+        <rdfs:subClassOf rdf:resource="&DUL;Entity"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.2.1789) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="deri.sensor.javabeans">
+	<class name="Place" table="DERI.DBA.place" >
+		<id name="id">
+			<generator class="uuid"></generator>
+		</id>
+		<property name="woeid" />
+		<property name="geonameid" />
+		<property name="zipcode" />
+		<property name="street" />
+		<property name="city" />
+		<property name="province" />
+		<property name="country" />
+		<property name="continent" />
+		<property name="lat" not-null="true"/>
+		<property name="lng" not-null="true" />
+		<property name="infor"  type="text" />
+		<property name="author" not-null="true"/>
+		<property name="times" not-null="true"/>
+		<property name="agree" />
+		<property name="disagree" />
+	</class>
+</hibernate-mapping>

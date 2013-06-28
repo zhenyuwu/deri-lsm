@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="deri.sensor.javabeans">
+	<class name="UserFeed" table="DERI.DBA.userfeed">
+		<id name="id">
+		</id>		
+		<property name="feedURL" type="string"/>
+		<property name="query" type="text"/>	
+		<property name="feedType" type="string" length="10"/>					
+	</class>
+</hibernate-mapping>
