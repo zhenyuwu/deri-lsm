@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="deri.sensor.javabeans">
+	<class name="Destination" table="DERI.DBA.destination">
+		<id name="id">
+			<generator class="uuid"></generator>
+		</id>		
+		<property name="value" type="string"/>
+		<property name="observedURL" type="string"/>
+		<property name="propertyName" type="string"/>
+		<property name="times" not-null="true"/>			
+		<many-to-one name="observation" column="observationID" cascade="save-update" lazy="false" not-null="true"/>		
+	</class>
+</hibernate-mapping>

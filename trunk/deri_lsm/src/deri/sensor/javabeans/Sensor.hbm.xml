@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="deri.sensor.javabeans">
+	<class name="Sensor" table="DERI.DBA.sensor" >
+		<id name="id">
+			<generator class="uuid"></generator>
+		</id>
+		<property name="name" />
+		<property name="sensorType" not-null="true"/>
+		<property name="source" not-null="true"/>
+		<property name="sourceType" not-null="true"/>
+		<property name="infor"  type="text" />
+		<property name="code"/>
+		<property name="times" not-null="true"/>
+		<property name="author" not-null="true"/>
+		<many-to-one name="place" column="placeID" cascade="save-update" lazy="false" not-null="true"/>		
+		<many-to-one name="user" column="userID" cascade="save-update" lazy="false" not-null="true"/>
+	</class>
+</hibernate-mapping>

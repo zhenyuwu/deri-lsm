@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="deri.sensor.javabeans">
+	<class name="Airport" table="DERI.DBA.airportcsv">
+		<id name="id">
+		</id>		
+		<property name="AirportCode" type="string" length="3"/>
+		<property name="City" type="string"/>	
+		<property name="Country" type="string" length="10"/>
+		<property name="Latitude"/>
+		<property name="Longitude"/>			
+	</class>
+</hibernate-mapping>

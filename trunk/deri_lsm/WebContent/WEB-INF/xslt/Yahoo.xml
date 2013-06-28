@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+		<rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+			<channel>
+		
+<title>Yahoo! Weather - Artix, FR</title>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Artix__FR/*http://weather.yahoo.com/forecast/FRAQ0060_c.html</link>
+<description>Yahoo! Weather for Artix, FR</description>
+<language>en-us</language>
+<lastBuildDate>Thu, 01 Dec 2011 11:28 pm CET</lastBuildDate>
+<ttl>60</ttl>
+
+<yweather:location city="Artix" region=""   country="France"/>
+<yweather:units temperature="C" distance="km" pressure="mb" speed="km/h"/>
+<yweather:wind chill="5"   direction="0"   speed="1.61" />
+<yweather:atmosphere humidity="87"  visibility="9.99"  pressure="982.05"  rising="0" />
+<yweather:astronomy sunrise="8:13 am"   sunset="5:26 pm"/>
+<image>
+<title>Yahoo! Weather</title>
+<width>142</width>
+<height>18</height>
+<link>http://weather.yahoo.com</link>
+<url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+</image>
+
+<item>
+<title>Conditions for Artix, FR at 11:28 pm CET</title>
+<geo:lat>43.4</geo:lat>
+<geo:long>-0.57</geo:long>
+<link>http://us.rd.yahoo.com/dailynews/rss/weather/Artix__FR/*http://weather.yahoo.com/forecast/FRAQ0060_c.html</link>
+<pubDate>Thu, 01 Dec 2011 11:28 pm CET</pubDate>
+<yweather:condition  text="Fair"  code="33"  temp="5"  date="Thu, 01 Dec 2011 11:28 pm CET" />
+<description><![CDATA[
+<img src="http://l.yimg.com/a/i/us/we/52/33.gif"/><br />
+<b>Current Conditions:</b><br />
+Fair, 5 C<BR />
+<BR /><b>Forecast:</b><BR />
+Thu - Rain Late. High: 17 Low: 8<br />
+Fri - Rain. High: 11 Low: 4<br />
+<br />
+<a href="http://us.rd.yahoo.com/dailynews/rss/weather/Artix__FR/*http://weather.yahoo.com/forecast/FRAQ0060_c.html">Full Forecast at Yahoo! Weather</a><BR/><BR/>
+(provided by <a href="http://www.weather.com" >The Weather Channel</a>)<br/>
+]]></description>
+<yweather:forecast day="Thu" date="1 Dec 2011" low="8" high="17" text="Rain Late" code="12" />
+<yweather:forecast day="Fri" date="2 Dec 2011" low="4" high="11" text="Rain" code="12" />
+<guid isPermaLink="false">FRAQ0060_2011_12_02_7_00_CET</guid>
+
+</item>
+</channel>
+</rss>
+<!-- api9.weather.ch1.yahoo.com compressed/chunked Thu Dec  1 14:50:46 PST 2011 -->

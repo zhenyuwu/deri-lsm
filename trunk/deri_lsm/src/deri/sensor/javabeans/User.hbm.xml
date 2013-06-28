@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="deri.sensor.javabeans">
+	<class name="User" table="DERI.DBA.users" >
+		<id name="id">
+			<generator class="uuid"></generator>
+		</id>
+		
+		<property name="nickname" />
+		<property name="username" not-null="true"/>
+		<property name="pass" not-null="true"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,55 @@
+<?page id="sensors" title="Sensors" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="win" title="Sensors" border="normal" height="100%" style="overflow:auto" use="deri.sensor.components.windows.MainWindow">	
+	<style dynamic="true">
+        .z-toolbar a, .z-toolbar a:visited, .z-toolbar a:hover {
+            background-color:transparent;
+            border:0 none;
+        }
+        .vista {
+            background:#590606 repeat-x 0 0;
+            color:#F5F1F1;
+            padding-top:7px;
+            padding-left:0%;
+        }
+ 		.status {
+            background:	#FBFCF8 repeat-x 0 0;
+                        
+        }
+        .fisheyeStyle {
+			padding-top: 35%;
+			background-color: #FBF4B7;
+		}
+    </style>
+    <!-- <toolbar id="statusbar" sclass="status" use="deri.sensor.components.Map.StatusBar" height="3%"/>-->
+	<toolbar id="markerbar" sclass="vista" use="deri.sensor.components.Map.MarkerToolBar" align="center"/>	
+	<!-- 
+		<div height="8%" align="center" sclass="fisheyeStyle">
+    	</div>  -->		
+			
+	<script			
+			src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAzXgp9AiG0VZ3RRTjzh22hBSfPprcu3cBSe8prHmv71-_J_VSgBRWnJzooSqo0brAzXZlC5OagDkwYA"
+			type="text/javascript">
+	</script>
+	<borderlayout id="layout" height="90%" >		
+		<west id="west" title="User panel" flex="true" border="none" collapsible="true" open="false" size="7%">
+		<div id="westDiv" height="8%" align="center" >    	
+			 <fisheyebar id="userFishEyeBar" style="position:absolute; margin:5px 15px;padding-top: 50% " attachEdge="left" 
+        			itemWidth="50" itemHeight="50" itemMaxHeight="80" itemMaxWidth="80" 
+        			use="deri.sensor.components.Map.UserFisheyeBar" orient="vertical" labelEdge="center">       
+    		</fisheyebar>
+    		</div>    		
+		</west>
+		<center id="center" border="none" flex="true" >
+			<gmaps id="map" width="100%" height="90%" use="deri.sensor.components.Map.GMaps">
+			</gmaps>			
+		</center>
+		<east id="east" title="Filter Panel" border="none" collapsible="true" open="false" size="14%">
+			<window id="filterWindow" border="none" height="80%" use="deri.sensor.components.user.UserControlWindow"/> 
+		</east>
+		<south id="south" title="Search" flex="true" border="0" collapsible="true" size="30%">			
+			<tabbox id="searchTab" height="100%" use="deri.sensor.components.search.SearchTabbox"/>
+		</south>
+	</borderlayout>	
+</window>
+</zk>
