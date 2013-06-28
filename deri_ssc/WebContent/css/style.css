@@ -1,0 +1,161 @@
+
+body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    height: 100%;
+    line-height: 1.5em;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    top: 0;
+    width: 100%;
+}
+a:link {
+    color: #CF7F18;
+}
+/* a:visited { */
+/*     color: #AD660C; */
+/* } */
+a:hover, a:focus {
+    color: #FF9814;
+    text-decoration: none;
+}
+p {
+    margin: 1em 0;
+}
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    margin-top: -0.05em;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #9CA716;
+    margin-bottom: 0.5em;
+}
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+}
+ol, ul {
+    margin: 1em 0 1em 2em;
+}
+ol ol, ol ul, ul ol, ul ul {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+ol li {
+    list-style: decimal outside none;
+}
+ol li ol li {
+    list-style: upper-alpha outside none;
+}
+ol li ol li ol li {
+    list-style: upper-roman outside none;
+}
+ul li {
+    list-style: disc outside none;
+}
+em {
+    font-style: italic;
+}
+strong {
+    font-weight: bold;
+}
+em strong, strong em {
+    font-style: italic;
+    font-weight: bold;
+}
+#container {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #E69623;
+    border-style: solid;
+    border-width: 3px 0;
+    display: block;
+    height: 210px;
+    margin: -100px 0 0;
+    opacity: 0.9;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+#logo {
+    background: url("../img/logo.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 32px;
+    left: 50%;
+    line-height: 999em;
+    margin: 0 0 0 -280px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 999em;
+    top: 15px;
+    width: 186px;
+}
+#content {
+    display: block;
+    left: 50%;
+    margin: 0 0 0 -50px;
+    padding: 15px 0;
+    position: relative;
+    top: 10px;
+    width: 400px;
+}
+#footer {
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.tweet {
+			background: #E1EBFF;
+			margin: 4px 0;
+			width: 100%;
+			padding: 8px;
+			-moz-border-radius: 8px;
+			-webkit-border-radius: 8px;
+		}
+		.tweet img {
+			float: left;
+			margin: 0 8px 4px 0;
+		}
+		.tweet .text {
+			margin: 0;
+		}
+		.tweet .time a {
+			font-size: 80%;
+			color: #888;
+			white-space: nowrap;
+			text-decoration: none;
+		}
+		.tweet .time a:hover {
+			text-decoration: underline;
+		}
+		#twitterSearch .tweet {
+			min-height: 24px;
+		}
+		#twitterSearch .tweet .text {
+			margin-left: 32px;
+		}

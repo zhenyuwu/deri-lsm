@@ -1,0 +1,41 @@
+{
+ "bossresponse": {
+  "responsecode": "200",
+  "placefinder": {
+   "start": "0",
+   "count": "1",
+   "request": "flags=J&location=San%20Francisco%2C%20CA",
+   "results": [{
+    "quality": "40",
+    "latitude": "37.777119",
+    "longitude": "-122.41964",
+    "offsetlat": "37.777119",
+    "offsetlon": "-122.41964",
+    "radius": "8800",
+    "name": "",
+    "line1": "",
+    "line2": "San Francisco, CA",
+    "line3": "",
+    "line4": "United States",
+    "house": "",
+    "street": "",
+    "xstreet": "",
+    "unittype": "",
+    "unit": "",
+    "postal": "",
+    "neighborhood": "",
+    "city": "San Francisco",
+    "county": "San Francisco County",
+    "state": "California",
+    "country": "United States",
+    "countrycode": "US",
+    "statecode": "CA",
+    "countycode": "",
+    "uzip": "94102",
+    "hash": "",
+    "woeid": "2487956",
+    "woetype": "7"
+   }]
+  }
+ }
+}
