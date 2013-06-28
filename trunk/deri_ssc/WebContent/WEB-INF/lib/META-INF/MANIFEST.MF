@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Rsrc-Class-Path: ./ stax-api-1.0.1_2.jar jena-2.6.4.jar log4j-1.2.14_2
+ .jar slf4j-log4j12-1.5.8.jar xercesImpl-2.7.1.jar junit-4.5.jar slf4j
+ -log4j12-1.5.8_2.jar wstx-asl-3.2.9_2.jar lucene-core-2.3.1_2.jar sta
+ x-api-1.0.1.jar commons-math-2.2.jar lucene-core-2.3.1.jar commons-lo
+ gging-1.1.1.jar je-4.1.10.jar jena-2.6.4_2.jar iri-0.8_2.jar antlr-ru
+ ntime-3.2.jar slf4j-api-1.5.8_2.jar icu4j-3.4.4.jar xercesImpl-2.7.1_
+ 2.jar icu4j-3.4.4_2.jar tdb-0.8.10.jar log4j-1.2.15.jar esper-4.2.0.j
+ ar arq-2.8.8_2.jar jena-2.6.2-tests.jar wstx-asl-3.2.9.jar tdb-0.8.10
+ _2.jar slf4j-api-1.5.8.jar iri-0.8.jar cglib-nodep-2.2.jar log4j-1.2.
+ 14.jar arq-2.8.8.jar
+Class-Path: .
+Rsrc-Main-Class: org.deri.cqels.test.ISWC2011
+Main-Class: org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader
+
